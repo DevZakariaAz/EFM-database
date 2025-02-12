@@ -9,7 +9,6 @@ class RandonneeService
     public function checkAndAssignRecommendation(Randonnee $randonnee)
     {
         $nombreAvisPositifs = $randonnee->avis()->where('positif', '>=', 1)->count();
-
         if ($nombreAvisPositifs >= 10) {
             $randonnee->update(['suggestion' => 'Randonnée Recommandée']);
         }
