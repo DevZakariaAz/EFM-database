@@ -6,11 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Membre extends Model
 {
-    use HasFactory;
-    protected $fillable = ['nom'];
-
-    public function randonnee()
-    {
-        return $this->hasOne(Randonnee::class);
-    }
+        // code...
 }
