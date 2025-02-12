@@ -7,5 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Suggestion extends Model
 {
-        // code...
+    use HasFactory;
+    protected $fillable = ['contenu'];
+
+    public function avis()
+    {
+        return $this->belongsToMany(Avis::class);
+    }
 }
